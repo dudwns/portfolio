@@ -1,12 +1,21 @@
+"use client";
+
+import { motion } from "framer-motion";
 import HeaderList from "./HeaderList";
-import HeaderTitle from "./HeaderTitle";
+import { useScrollContext } from "@/app/context/ScrollContext";
 
 const Header = () => {
+  const { isVisible } = useScrollContext();
+
   return (
-    <nav className="p-4 flex justify-between items-center fixed w-full z-10 text-lg">
-      <HeaderTitle />
+    <motion.nav
+      className="p-4 flex justify-end items-center fixed w-full z-10 text-base"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 0.1 }}
+    >
       <HeaderList />
-    </nav>
+    </motion.nav>
   );
 };
 
