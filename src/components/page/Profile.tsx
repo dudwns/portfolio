@@ -15,14 +15,13 @@ const Profile = () => {
 
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
       className="flex flex-col h-screen p-14 gap-80"
     >
       <SectionTitle title="ABOUT ME" />
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center" ref={ref}>
         <div className="flex flex-col">
           <div className="flex flex-col items-start text-6xl mb-10 gap-4">
             <span>안녕하세요,</span>
