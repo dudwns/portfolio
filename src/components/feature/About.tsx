@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-import Profile from "../page/Profile";
 import Lottie from "lottie-react";
 import animationData from "../../../public/animations/scrollAnimation.json";
 
@@ -51,7 +50,6 @@ const About = () => {
           </motion.div>
         )}
       </div>
-      <Profile />
     </>
   );
 };

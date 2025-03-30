@@ -1,9 +1,12 @@
-import LanguageChart from "@/components/feature/LanguageChart";
-
+import About from "@/components/feature/About";
+import Skills from "@/components/page/Skills";
+import Profile from "@/components/page/Profile";
 function Home() {
   return (
-    <div>
-      <LanguageChart />
+    <div className="max-w-400 mx-auto">
+      <About />
+      <Profile />
+      <Skills />
     </div>
   );
 }
