@@ -4,10 +4,12 @@ import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import animationData from "../../../public/animations/scrollAnimation.json";
+import { useScrollContext } from "@/app/context/ScrollContext";
 
 const About = () => {
   const [isH1Complete, setIsH1Complete] = useState(false);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const { lastScrollY } = useScrollContext();
 
   return (
     <>
@@ -23,7 +25,7 @@ const About = () => {
             Front-End Developer
           </motion.h1>
           <motion.div
-            className=" bottom-0 left-0 h-1 bg-foreground"
+            className="h-0.5 bg-foreground"
             initial={{ width: 0 }}
             animate={isH1Complete ? { width: "100%" } : { width: 0 }}
             transition={{ duration: 0.5 }}
@@ -42,9 +44,9 @@ const About = () => {
         {isTypingComplete && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={isTypingComplete ? { opacity: 1 } : { opacity: 0 }}
+            animate={isTypingComplete && lastScrollY === 0 ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="absolute bottom-0 left-0 right-0 mx-auto w-16 h-16"
+            className="fixed bottom-0 left-0 right-0 mx-auto w-16 h-16"
           >
             <Lottie animationData={animationData} loop={true} />
           </motion.div>
