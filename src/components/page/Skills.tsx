@@ -3,9 +3,10 @@
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import SectionTitle from "../common/SectionTitle";
 
 const Skills = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, {
     once: true,
     amount: 0.3,
@@ -17,9 +18,9 @@ const Skills = () => {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col gap-16 px-14 h-screen pt-14"
+      className="flex flex-col gap-40 px-14 h-screen pt-14"
     >
-      <h1 className="text-4xl font-bold">SKILLS</h1>
+      <SectionTitle title="SKILLS" />
       <div className="flex justify-between w-full">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-2xl font-bold">Core Technologies</h1>

@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
+import SectionTitle from "../common/SectionTitle";
 
 const Profile = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, {
     once: true,
     amount: 0.3,
@@ -17,10 +18,10 @@ const Profile = () => {
       ref={ref}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.8 }}
-      className="flex flex-col h-screen p-14 gap-40"
+      transition={{ duration: 0.5 }}
+      className="flex flex-col h-screen p-14 gap-80"
     >
-      <h1 className="text-4xl font-bold">ABOUT ME</h1>
+      <SectionTitle title="ABOUT ME" />
       <div className="flex justify-between items-center">
         <div className="flex flex-col">
           <div className="flex flex-col items-start text-6xl mb-10 gap-4">
