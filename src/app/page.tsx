@@ -1,4 +1,4 @@
-import About from "@/components/feature/About";
+import About from "@/components/page/About";
 import Skills from "@/components/page/Skills";
 import Profile from "@/components/page/Profile";
 function Home() {
