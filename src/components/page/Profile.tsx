@@ -18,7 +18,7 @@ const Profile = () => {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col h-screen p-14 gap-80"
+      className="flex flex-col h-screen p-14 gap-40"
     >
       <SectionTitle title="ABOUT ME" />
       <div className="flex justify-between items-center" ref={ref}>
