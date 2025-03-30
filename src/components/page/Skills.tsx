@@ -78,7 +78,7 @@ const Skills = () => {
           </div>
         </div>
         <div className="flex flex-col items-start gap-4">
-          <h1 className="text-2xl font-bold">Development Tools</h1>
+          <h1 className="text-2xl font-bold">Tools</h1>
           <div className="flex flex-col justify-center gap-6 py-2">
             {SKILLS.TOOLS.map((tool) => (
               <div className="flex items-center gap-6" key={tool.name}>
