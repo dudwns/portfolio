@@ -4,7 +4,7 @@ import { useInView, motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import SectionTitle from "../common/SectionTitle";
-import { SKILLS } from "@/constants/skills";
+import { SKILLS } from "@/app/data/skills";
 
 export default function Skills() {
   const ref = useRef<HTMLDivElement | null>(null);
