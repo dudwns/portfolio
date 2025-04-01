@@ -11,7 +11,11 @@ export default function Header() {
     <motion.nav
       className="p-4 flex justify-end items-center fixed w-full z-10 text-base"
       initial={{ opacity: 1 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
+      animate={{
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : -100,
+        pointerEvents: isVisible ? "auto" : "none",
+      }}
       transition={{ duration: 0.1 }}
     >
       <HeaderList />
