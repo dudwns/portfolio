@@ -75,9 +75,5 @@ export const SKILLS = {
       name: "Slack",
       image: "/images/skills/slack.png",
     },
-    {
-      name: "Discord",
-      image: "/images/skills/discord.png",
-    },
   ],
 };
