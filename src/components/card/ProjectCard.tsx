@@ -39,7 +39,7 @@ export default function ProjectCard({
           <div className="flex justify-between items-center">
             <p className="text-xl">{title}</p>
             <span className="text-gray-300 text-sm">
-              {isCollaborative ? "Team Project" : "Solo Project"}
+              {isCollaborative ? "Team Project" : "Sing Project"}
             </span>
           </div>
           <p className="text-sm">{description}</p>
