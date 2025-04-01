@@ -30,6 +30,7 @@ export default function Project() {
             description={item.description}
             isCollaborative={item.isCollaborative}
             route={item.route}
+            skills={item.skills}
           />
         ))}
       </div>
