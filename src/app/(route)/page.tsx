@@ -1,7 +1,7 @@
-import About from "@/components/page/About";
-import Skills from "@/components/page/Skills";
-import Profile from "@/components/page/Profile";
-import Project from "@/components/page/Project";
+import About from "@/components/section/About";
+import Skills from "@/components/section/Skills";
+import Profile from "@/components/section/Profile";
+import Project from "@/components/section/Project";
 
 function Home() {
   return (

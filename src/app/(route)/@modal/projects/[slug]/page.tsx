@@ -1,4 +1,4 @@
-import MarkdownViewer from "@/components/common/markdown/MarkdownViewer";
+import MarkdownViewer from "@/components/markdown/MarkdownViewer";
 
 type Props = {
   params: {

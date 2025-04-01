@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import Card from "../common/Card";
+import ProjectCard from "../card/ProjectCard";
 import { motion, useInView } from "framer-motion";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../title/SectionTitle";
 import { PROJECT_LIST } from "@/app/data/project.json";
 
 export default function Project() {
@@ -23,7 +23,7 @@ export default function Project() {
       <SectionTitle title="PROJECT" />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4" ref={ref}>
         {PROJECT_LIST.map((item) => (
-          <Card
+          <ProjectCard
             key={item.title}
             image={item.image}
             title={item.title}

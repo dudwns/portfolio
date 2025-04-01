@@ -3,7 +3,7 @@
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../title/SectionTitle";
 import { SKILLS } from "@/app/data/skills.json";
 
 export default function Skills() {

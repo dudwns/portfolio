@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../title/SectionTitle";
 
 export default function Profile() {
   const ref = useRef<HTMLDivElement | null>(null);
