@@ -3,37 +3,42 @@
     {
       "image": "/images/project/linkhub_thumbnail.webp",
       "title": "LinkHub",
-      "description": "개인 또는 팀 스페이스를 생성하여 링크를 저장할 수 있고, 다른 사용자에게 링크 모음집을 공유할 수 있는 서비스입니다.",
+      "description": "개인 또는 팀 스페이스를 생성하여 링크를 저장하고, 다른 사용자에게 링크 모음집을 공유할 수 있는 서비스",
       "isCollaborative": true,
-      "route": "linkhub"
+      "route": "linkhub",
+      "skills": ["Next", "TypeScript", "Tailwind", "React Query", "AWS"]
     },
     {
       "image": "/images/project/angola_thumbnail.webp",
       "title": "Angola",
-      "description": "SNS 기능 api를 활용한 밸런스 게임 커뮤니티 서비스입니다.",
+      "description": "SNS 기능 API를 활용한 밸런스 게임 커뮤니티 서비스",
       "isCollaborative": true,
-      "route": "angola"
+      "route": "angola",
+      "skills": ["React", "TypeScript", "Recoil", "Styled Components", "React Query"]
     },
     {
       "image": "/images/project/portfolio_thumbnail.png",
       "title": "Portfolio",
-      "description": "저만의 소개 페이지를 제작한 포트폴리오 사이트입니다.",
+      "description": "프론트엔드 개발자 김영준 포트폴리오 사이트",
       "isCollaborative": false,
-      "route": "portfolio"
+      "route": "portfolio",
+      "skills": ["Next", "TypeScript", "Tailwind"]
     },
     {
       "image": "/images/project/mealkitary_thumbnail.webp",
       "title": "Mealkitary",
-      "description": "어플리케이션을 통해 매장 점주와 손님을 연결하여 밀키트를 판매/구매할 수 있도록 예약 서비스를 제공하는 웹/앱 서비스입니다.",
+      "description": "밀키트를 거래할 수 있도록 예약 서비스를 제공하는 웹/앱 서비스",
       "isCollaborative": true,
-      "route": "mealkitary"
+      "route": "mealkitary",
+      "skills": ["Next", "TypeScript", "Tailwind", "Recoil", "React Query"]
     },
     {
       "image": "/images/project/notion_thumbnail.webp",
       "title": "Notion Clone",
-      "description": "데브 코스 교육 과정에서 제공된 API를 활용하여 만든 노션 클론 에디터 서비스입니다. Vanila JS를 학습하고 SPA를 구축해 보기 위해 제작해 보았습니다.",
+      "description": "데브 코스 교육 과정에서 제공된 API를 활용하여 만든 노션 클론 에디터 서비스",
       "isCollaborative": false,
-      "route": "notion"
+      "route": "notion",
+      "skills": ["JavaScript"]
     }
   ]
 }
