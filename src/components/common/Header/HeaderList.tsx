@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
-const HeaderList = () => {
+export default function HeaderList() {
   const pathname = usePathname();
 
   return (
@@ -31,6 +31,4 @@ const HeaderList = () => {
       ))}
     </ul>
   );
-};
-
-export default HeaderList;
+}

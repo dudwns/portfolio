@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
 import SectionTitle from "../common/SectionTitle";
 
-const Profile = () => {
+export default function Profile() {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, {
     once: true,
@@ -97,6 +97,4 @@ const Profile = () => {
       </div>
     </motion.div>
   );
-};
-
-export default Profile;
+}

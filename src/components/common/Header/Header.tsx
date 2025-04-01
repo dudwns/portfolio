@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import HeaderList from "./HeaderList";
 import { useScrollContext } from "@/app/context/ScrollContext";
 
-const Header = () => {
+export default function Header() {
   const { isVisible } = useScrollContext();
 
   return (
@@ -17,6 +17,4 @@ const Header = () => {
       <HeaderList />
     </motion.nav>
   );
-};
-
-export default Header;
+}

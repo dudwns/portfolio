@@ -3,10 +3,10 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useScroll } from "framer-motion";
 
-interface ScrollContextType {
+type ScrollContextType = {
   isVisible: boolean;
   lastScrollY: number;
-}
+};
 
 const ScrollContext = createContext<ScrollContextType>({ isVisible: true, lastScrollY: 0 });
 

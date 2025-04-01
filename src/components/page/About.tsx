@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 import animationData from "../../../public/animations/scrollAnimation.json";
 import { useScrollContext } from "@/app/context/ScrollContext";
 
-const About = () => {
+export default function About() {
   const [isH1Complete, setIsH1Complete] = useState(false);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const { lastScrollY } = useScrollContext();
@@ -54,6 +54,4 @@ const About = () => {
       </div>
     </>
   );
-};
-
-export default About;
+}

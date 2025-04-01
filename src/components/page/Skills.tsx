@@ -6,7 +6,7 @@ import { useRef } from "react";
 import SectionTitle from "../common/SectionTitle";
 import { SKILLS } from "@/constants/skills";
 
-const Skills = () => {
+export default function Skills() {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, {
     once: true,
@@ -98,6 +98,4 @@ const Skills = () => {
       </div>
     </motion.div>
   );
-};
-
-export default Skills;
+}
