@@ -12,46 +12,44 @@ export default function About() {
   const { lastScrollY } = useScrollContext();
 
   return (
-    <>
-      <div className="flex flex-col h-screen px-14 py-20 justify-between relative">
-        <div>
-          <motion.h1
-            className="text-4xl font-bold w-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            onAnimationComplete={() => setIsH1Complete(true)}
-          >
-            Front-End Developer
-          </motion.h1>
-          <motion.div
-            className="h-0.5 bg-foreground"
-            initial={{ width: 0 }}
-            animate={isH1Complete ? { width: "100%" } : { width: 0 }}
-            transition={{ duration: 0.5 }}
-          />
-        </div>
-        <div className="h-40">
-          <ReactTyped
-            className="text-7xl font-bold w-full"
-            strings={["YEONG JUN <div>PORTFOLIO</div>"]}
-            typeSpeed={50}
-            backSpeed={25}
-            showCursor={false}
-            onComplete={() => setIsTypingComplete(true)}
-          />
-        </div>
-        {isTypingComplete && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isTypingComplete && lastScrollY === 0 ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className="fixed bottom-0 left-0 right-0 mx-auto w-16 h-16"
-          >
-            <Lottie animationData={animationData} loop={true} />
-          </motion.div>
-        )}
+    <section className="flex flex-col h-screen px-14 py-20 justify-between relative">
+      <div>
+        <motion.h1
+          className="text-4xl font-bold w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          onAnimationComplete={() => setIsH1Complete(true)}
+        >
+          Front-End Developer
+        </motion.h1>
+        <motion.div
+          className="h-0.5 bg-foreground"
+          initial={{ width: 0 }}
+          animate={isH1Complete ? { width: "100%" } : { width: 0 }}
+          transition={{ duration: 0.5 }}
+        />
       </div>
-    </>
+      <div className="h-40">
+        <ReactTyped
+          className="text-7xl font-bold w-full"
+          strings={["YEONG JUN <div>PORTFOLIO</div>"]}
+          typeSpeed={50}
+          backSpeed={25}
+          showCursor={false}
+          onComplete={() => setIsTypingComplete(true)}
+        />
+      </div>
+      {isTypingComplete && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isTypingComplete && lastScrollY === 0 ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          className="fixed bottom-0 left-0 right-0 mx-auto w-16 h-16"
+        >
+          <Lottie animationData={animationData} loop={true} />
+        </motion.div>
+      )}
+    </section>
   );
 }
