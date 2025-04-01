@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
 
 type ScrollContextType = {
@@ -14,19 +14,48 @@ export const ScrollProvider = ({ children }: { children: React.ReactNode }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { scrollY } = useScroll();
+  const isMouseWheel = useRef(false);
+  const timeoutId = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    const handleWheel = () => {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
 
-    return scrollY.on("change", (latest) => {
-      clearTimeout(timeoutId);
+      isMouseWheel.current = true;
 
-      timeoutId = setTimeout(() => {
+      timeoutId.current = setTimeout(() => {
+        isMouseWheel.current = false;
+      }, 500);
+    };
+
+    const handleClick = () => {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
+      isMouseWheel.current = false;
+    };
+
+    window.addEventListener("wheel", handleWheel);
+    window.addEventListener("click", handleClick);
+
+    const unsubscribeScroll = scrollY.on("change", (latest) => {
+      if (isMouseWheel.current) {
         const isScrollingDown = latest > lastScrollY;
         setIsVisible(!isScrollingDown);
-        setLastScrollY(latest);
-      }, 100);
+      }
+      setLastScrollY(latest);
     });
+
+    return () => {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("click", handleClick);
+      unsubscribeScroll();
+    };
   }, [scrollY, lastScrollY]);
 
   return (
