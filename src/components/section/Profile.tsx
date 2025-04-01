@@ -14,7 +14,8 @@ export default function Profile() {
   });
 
   return (
-    <motion.div
+    <motion.section
+      id="about"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
@@ -95,6 +96,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }

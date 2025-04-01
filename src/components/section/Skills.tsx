@@ -14,7 +14,8 @@ export default function Skills() {
   });
 
   return (
-    <motion.div
+    <motion.section
+      id="skills"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
@@ -96,6 +97,6 @@ export default function Skills() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }

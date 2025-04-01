@@ -15,6 +15,7 @@ export default function Project() {
 
   return (
     <motion.section
+      id="project"
       className="flex flex-col h-screen p-14 gap-20"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
