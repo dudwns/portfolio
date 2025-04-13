@@ -3,78 +3,94 @@
     "CORE_TECHNOLOGIES": [
       {
         "name": "HTML",
-        "image": "/images/skills/html.png"
+        "image": "/images/skills/html.png",
+        "description": "웹 페이지의 구조를 설계하는 마크업 언어입니다."
       },
       {
         "name": "CSS",
-        "image": "/images/skills/css.png"
+        "image": "/images/skills/css.png",
+        "description": "웹 페이지의 스타일을 지정하는 스타일 시트 언어입니다."
       },
       {
         "name": "JavaScript",
-        "image": "/images/skills/javascript.png"
+        "image": "/images/skills/javascript.png",
+        "description": "웹 페이지에 동적인 기능을 추가할 수 있는 프로그래밍 언어입니다."
       },
       {
         "name": "TypeScript",
-        "image": "/images/skills/typescript.png"
+        "image": "/images/skills/typescript.png",
+        "description": "JavaScript에 정적 타입을 부여한 언어로, 코드 안정성을 높여줍니다."
       }
     ],
-
     "FRAMEWORKS": [
       {
         "name": "React.js",
-        "image": "/images/skills/reactjs.png"
+        "image": "/images/skills/reactjs.png",
+        "description": "컴포넌트 기반의 사용자 인터페이스를 구축하기 위한 JavaScript 라이브러리입니다."
       },
       {
         "name": "Next.js",
-        "image": "/images/skills/nextjs.png"
+        "image": "/images/skills/nextjs.png",
+        "description": "React 기반의 프레임워크로, 서버 사이드 렌더링과 정적 사이트 생성을 지원합니다."
       },
       {
         "name": "React-Query",
-        "image": "/images/skills/reactQuery.png"
+        "image": "/images/skills/reactQuery.png",
+        "description": "React 애플리케이션에서 서버 상태를 효율적으로 관리할 수 있는 라이브러리입니다."
       },
       {
         "name": "React-Hook-Form",
-        "image": "/images/skills/reactHookForm.png"
+        "image": "/images/skills/reactHookForm.png",
+        "description": "React에서 효율적인 폼 관리를 위한 라이브러리입니다."
       }
     ],
     "STYLINGS": [
       {
         "name": "SASS",
-        "image": "/images/skills/sass.png"
+        "image": "/images/skills/sass.png",
+        "description": "CSS의 확장 언어로, 변수, 중첩 등의 기능을 통해 스타일 작성을 효율화합니다."
       },
       {
         "name": "Styled-Components",
-        "image": "/images/skills/styledComponents.png"
+        "image": "/images/skills/styledComponents.png",
+        "description": "JavaScript 안에서 CSS를 작성할 수 있도록 도와주는 CSS-in-JS 라이브러리입니다."
       },
       {
         "name": "Tailwind",
-        "image": "/images/skills/tailwindcss.png"
+        "image": "/images/skills/tailwindcss.png",
+        "description": "유틸리티 클래스 기반으로 빠르게 UI를 구성할 수 있는 CSS 프레임워크입니다."
       }
     ],
     "TOOLS": [
       {
         "name": "AWS",
-        "image": "/images/skills/aws.png"
+        "image": "/images/skills/aws.png",
+        "description": "클라우드 기반의 서버, 데이터베이스, 배포 등을 제공하는 플랫폼입니다."
       },
       {
         "name": "Github",
-        "image": "/images/skills/github.png"
+        "image": "/images/skills/github.png",
+        "description": "버전 관리를 위한 Git 저장소 호스팅 서비스입니다."
       },
       {
         "name": "Figma",
-        "image": "/images/skills/figma.png"
+        "image": "/images/skills/figma.png",
+        "description": "UI/UX 디자인 및 프로토타입 제작을 위한 협업 도구입니다."
       },
       {
         "name": "Notion",
-        "image": "/images/skills/notion.png"
+        "image": "/images/skills/notion.png",
+        "description": "문서 작성, 일정 관리, 협업을 위한 워크스페이스입니다."
       },
       {
         "name": "Jira",
-        "image": "/images/skills/jira.png"
+        "image": "/images/skills/jira.png",
+        "description": "프로젝트 및 이슈 관리를 위한 애자일 기반 협업 도구입니다."
       },
       {
         "name": "Slack",
-        "image": "/images/skills/slack.png"
+        "image": "/images/skills/slack.png",
+        "description": "실시간 메시징 기반의 팀 커뮤니케이션 도구입니다."
       }
     ]
   }
