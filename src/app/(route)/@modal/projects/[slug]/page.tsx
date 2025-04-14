@@ -6,6 +6,8 @@ type Props = {
   };
 };
 
-export default function ProjectModal({ params: { slug } }: Props) {
+export default async function ProjectModal({ params }: Props) {
+  const { slug } = await params;
+
   return <MarkdownViewer slug={slug} />;
 }
