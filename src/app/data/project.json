@@ -27,7 +27,7 @@
     {
       "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/mealkitary_thumbnail.webp",
       "title": "Mealkitary",
-      "description": "밀키트를 거래할 수 있도록 예약 서비스를 제공하는 웹/앱 서비스",
+      "description": "밀키트를 거래할 수 있도록 예약 서비스를 제공하는 서비스",
       "isCollaborative": true,
       "route": "mealkitary",
       "skills": ["Next", "TypeScript", "Tailwind", "Recoil", "React Query"]
