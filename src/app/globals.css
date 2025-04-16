@@ -44,3 +44,161 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.markdown-styles div,
+.markdown-styles span,
+.markdown-styles applet,
+.markdown-styles object,
+.markdown-styles iframe,
+.markdown-styles h1,
+.markdown-styles h2,
+.markdown-styles h3,
+.markdown-styles h4,
+.markdown-styles h5,
+.markdown-styles h6,
+.markdown-styles p,
+.markdown-styles blockquote,
+.markdown-styles pre,
+.markdown-styles a,
+.markdown-styles abbr,
+.markdown-styles acronym,
+.markdown-styles address,
+.markdown-styles big,
+.markdown-styles cite,
+.markdown-styles code,
+.markdown-styles del,
+.markdown-styles dfn,
+.markdown-styles em,
+.markdown-styles img,
+.markdown-styles ins,
+.markdown-styles kbd,
+.markdown-styles q,
+.markdown-styles s,
+.markdown-styles samp,
+.markdown-styles small,
+.markdown-styles strike,
+.markdown-styles strong,
+.markdown-styles sub,
+.markdown-styles sup,
+.markdown-styles tt,
+.markdown-styles var,
+.markdown-styles b,
+.markdown-styles u,
+.markdown-styles i,
+.markdown-styles center,
+.markdown-styles dl,
+.markdown-styles dt,
+.markdown-styles dd,
+.markdown-styles ol,
+.markdown-styles ul,
+.markdown-styles li,
+.markdown-styles fieldset,
+.markdown-styles form,
+.markdown-styles label,
+.markdown-styles legend,
+.markdown-styles table,
+.markdown-styles caption,
+.markdown-styles tbody,
+.markdown-styles tfoot,
+.markdown-styles thead,
+.markdown-styles tr,
+.markdown-styles th,
+.markdown-styles td,
+.markdown-styles article,
+.markdown-styles aside,
+.markdown-styles canvas,
+.markdown-styles details,
+.markdown-styles embed,
+.markdown-styles figure,
+.markdown-styles figcaption,
+.markdown-styles footer,
+.markdown-styles header,
+.markdown-styles hgroup,
+.markdown-styles menu,
+.markdown-styles nav,
+.markdown-styles output,
+.markdown-styles ruby,
+.markdown-styles section,
+.markdown-styles summary,
+.markdown-styles time,
+.markdown-styles mark,
+.markdown-styles audio,
+.markdown-styles video,
+.markdown-styles article,
+.markdown-styles aside,
+.markdown-styles details,
+.markdown-styles figcaption,
+.markdown-styles figure,
+.markdown-styles footer,
+.markdown-styles header,
+.markdown-styles hgroup,
+.markdown-styles menu,
+.markdown-styles nav,
+.markdown-styles section,
+.markdown-styles ol,
+.markdown-styles ul,
+.markdown-styles blockquote,
+.markdown-styles q,
+.markdown-styles blockquote:before,
+.markdown-styles blockquote:after,
+.markdown-styles q:before,
+.markdown-styles q:after,
+.markdown-styles table {
+  all: revert;
+}
+
+.markdown-styles h2,
+.markdown-styles h3 {
+  padding-top: 1rem;
+}
+.markdown-styles h3 {
+  line-height: 1.5rem;
+}
+.markdown-styles code {
+  border-radius: 4px;
+  padding: 3px 5px;
+  background: #e6e6e6;
+}
+.markdown-styles a {
+  text-decoration: none;
+  padding: 0 3px 3px 3px;
+  color: var(--primary-300);
+}
+.markdown-styles a:hover {
+  border-bottom: 3px solid #e7e7e7;
+}
+.markdown-styles ul,
+.markdown-styles ol {
+  line-height: 1.7rem;
+}
+.markdown-styles blockquote {
+  line-height: 1.5rem;
+  border-left: 4px solid #111827;
+  padding-left: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.markdown-styles p {
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .markdown-styles h2 {
+    font-size: 20px;
+  }
+  .markdown-styles h3 {
+    font-size: 16px;
+  }
+  .markdown-styles p,
+  .markdown-styles ul,
+  .markdown-styles ol {
+    font-size: 14px;
+  }
+  .markdown-styles ul,
+  .markdown-styles ol {
+    line-height: 1.5rem;
+  }
+  .markdown-styles p {
+    line-height: 1.3rem;
+  }
+}

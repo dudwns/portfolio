@@ -31,8 +31,7 @@ export default async function MarkdownViewer({ slug }: { slug: string }) {
             </div>
           </div>
         </div>
-
-        <div className="no-global-styles text-black p-20 pt-28">
+        <div className="markdown-styles text-black p-20 pt-28">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
@@ -56,7 +55,6 @@ export default async function MarkdownViewer({ slug }: { slug: string }) {
                   </code>
                 );
               },
-
               img: (image) => (
                 <Image
                   src={image.src || ""}
