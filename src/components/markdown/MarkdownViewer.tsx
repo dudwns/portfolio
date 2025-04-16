@@ -23,7 +23,7 @@ export default async function MarkdownViewer({ slug }: { slug: string }) {
           <div className="w-100 h-60 rounded-xl overflow-hidden border border-gray-300 p-2 absolute -bottom-28 left-0 right-0 mx-auto bg-white">
             <div className="relative w-full h-full rounded-xl overflow-hidden">
               <Image
-                src={`/images/project/${slug}_thumbnail.webp`}
+                src={`https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/${slug}_thumbnail.webp`}
                 alt={slug}
                 fill
                 className="absolute top-0 left-0 w-full h-full object-cover"
