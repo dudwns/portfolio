@@ -19,10 +19,13 @@ export default function Skills() {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col gap-20 px-14 h-screen pt-14"
+      className="flex flex-col px-14"
     >
       <SectionTitle title="SKILLS" />
-      <div className="flex justify-between w-full" ref={ref}>
+      <div
+        className="flex justify-between flex-col gap-10 items-center pt-30 pb-50 xl:flex-row xl:items-start xl:gap-0 "
+        ref={ref}
+      >
         <SkillList title="Core Technologies" skill_list={SKILLS.CORE_TECHNOLOGIES} />
         <SkillList title="Libraries & Frameworks" skill_list={SKILLS.FRAMEWORKS} />
         <SkillList title="Styling" skill_list={SKILLS.STYLINGS} />

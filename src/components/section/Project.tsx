@@ -16,13 +16,16 @@ export default function Project() {
   return (
     <motion.section
       id="project"
-      className="flex flex-col h-screen p-14 gap-20"
+      className="flex flex-col px-14"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       <SectionTitle title="PROJECT" />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4" ref={ref}>
+      <div
+        className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 pt-30 pb-50"
+        ref={ref}
+      >
         {PROJECT_LIST.map((item) => (
           <ProjectCard
             key={item.title}

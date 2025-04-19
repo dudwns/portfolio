@@ -12,7 +12,7 @@ export default function About() {
   const { lastScrollY } = useScrollContext();
 
   return (
-    <section className="flex flex-col h-screen px-14 py-20 justify-between relative">
+    <section className="flex flex-col h-screen px-14 py-20 justify-between relative min-h-180">
       <div>
         <motion.h1
           className="text-4xl font-bold w-full"
@@ -30,9 +30,9 @@ export default function About() {
           transition={{ duration: 0.5 }}
         />
       </div>
-      <div className="h-40">
+      <div className="h-40 pt-16 xl:pt-0">
         <ReactTyped
-          className="text-7xl font-bold w-full"
+          className="text-5xl xl:text-7xl font-bold w-full"
           strings={["YEONG JUN <div>PORTFOLIO</div>"]}
           typeSpeed={50}
           backSpeed={25}

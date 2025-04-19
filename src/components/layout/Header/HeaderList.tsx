@@ -17,7 +17,7 @@ export default function HeaderList() {
     return (
       <ul className="flex gap-4 relative">
         {SECTION_LIST.map((list) => (
-          <li key={list.id} className="relative">
+          <li key={list.id} className="relative text-sm">
             <Link href={list.id} className={`hover:text-white cursor-pointer text-gray-400`}>
               {list.name}
             </Link>
@@ -29,7 +29,7 @@ export default function HeaderList() {
   return (
     <ul className="flex gap-4 relative">
       {SECTION_LIST.map((list) => (
-        <li key={list.id} className="relative">
+        <li key={list.id} className="relative text-sm">
           <Link
             href={list.id}
             onClick={(e) => scrollToSection(e, list.id)}
