@@ -23,7 +23,7 @@ export default function Project() {
     >
       <SectionTitle title="PROJECT" />
       <div
-        className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 pt-30 pb-50"
+        className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 pt-30 pb-70"
         ref={ref}
       >
         {PROJECT_LIST.map((item) => (

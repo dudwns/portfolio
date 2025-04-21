@@ -23,7 +23,7 @@ export default function Skills() {
     >
       <SectionTitle title="SKILLS" />
       <div
-        className="flex justify-between flex-col gap-10 items-center pt-30 pb-50 xl:flex-row xl:items-start xl:gap-0 "
+        className="flex justify-between flex-col gap-10 items-center pt-30 pb-70 xl:flex-row xl:items-start xl:gap-0 "
         ref={ref}
       >
         <SkillList title="Core Technologies" skill_list={SKILLS.CORE_TECHNOLOGIES} />

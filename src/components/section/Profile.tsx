@@ -23,7 +23,7 @@ export default function Profile() {
     >
       <SectionTitle title="ABOUT ME" />
       <div
-        className="flex flex-col gap-20 pt-30 pb-50 justify-between items-center xl:flex-row xl:gap-0"
+        className="flex flex-col gap-20 pt-30 pb-70 justify-between items-center xl:flex-row xl:gap-0"
         ref={ref}
       >
         <div className="flex flex-col">
