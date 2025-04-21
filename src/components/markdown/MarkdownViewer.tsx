@@ -15,7 +15,7 @@ export default async function MarkdownViewer({ slug }: { slug: string }) {
 
   return (
     <ModalOverlay>
-      <article className=" max-w-screen-lg mx-auto my-auto max-h-[90vh] overflow-y-auto no-scrollbar shadow-xl fixed inset-0 z-40 scrollbar-hide  bg-white">
+      <article className=" max-w-screen-lg mx-auto lg:my-auto lg:max-h-[90vh] overflow-y-auto no-scrollbar shadow-xl fixed inset-0 z-40 scrollbar-hide  bg-white">
         <div className={`w-full h-80 flex flex-col relative p-4 ${PROJECT_BACKGROUND_COLOR[slug]}`}>
           <Button isBack className="hover:text-gray-300">
             <IoArrowBack size={30} />
