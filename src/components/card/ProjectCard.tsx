@@ -67,7 +67,7 @@ export default function ProjectCard({
         <span
           className="text-white text-lg  border border-white rounded-md px-2 py-1 cursor-pointer"
           onClick={() => {
-            router.push(`/projects/${route}`);
+            router.push(`/projects/${route}`, { scroll: false });
           }}
         >
           자세히 보기
