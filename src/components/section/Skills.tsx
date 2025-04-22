@@ -11,15 +11,13 @@ export default function Skills() {
 
   return (
     <motion.section
-      id="skills"
-      ref={ref}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col px-14 pb-20 "
+      className="flex flex-col px-14 pb-20"
     >
       <div>
-        <SectionTitle title="SKILLS" isInView />
+        <SectionTitle id="skills" ref={ref} title="SKILLS" isInView />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
           {SKILLS.map((category, index) => (
             <motion.div

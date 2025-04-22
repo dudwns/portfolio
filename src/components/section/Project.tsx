@@ -12,14 +12,13 @@ export default function Project() {
 
   return (
     <motion.section
-      id="project"
       className="flex flex-col px-14"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <SectionTitle title="PROJECT" isInView />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4  pb-60" ref={ref}>
+      <SectionTitle id="project" ref={ref} title="PROJECT" isInView />
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4  pb-60">
         {PROJECT_LIST.map((item, index) => (
           <motion.div
             key={item.title}

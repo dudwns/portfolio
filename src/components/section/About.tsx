@@ -12,17 +12,13 @@ export default function About() {
 
   return (
     <motion.section
-      id="about"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
       className="flex flex-col px-14"
     >
-      <SectionTitle title="ABOUT ME" isInView />
-      <div
-        className="flex flex-col gap-20 pb-60 justify-between items-center xl:flex-row xl:gap-0"
-        ref={ref}
-      >
+      <SectionTitle id="about" ref={ref} title="ABOUT ME" isInView />
+      <div className="flex flex-col gap-20 pb-60 justify-between items-center xl:flex-row xl:gap-0">
         <motion.div
           className="flex flex-col"
           initial={{ opacity: 0, x: -50 }}
@@ -36,10 +32,10 @@ export default function About() {
               <span className="text-blue-500">김영준</span>입니다.
             </span>
           </div>
-          <div className="text-base sm:text-xl">
+          <div className="text-base sm:text-lg md:text-xl">
             기술적인 <span className="text-blue-500">도전</span>에 즐거움을 느끼며
           </div>
-          <div className="text-base sm:text-xl">
+          <div className="text-base sm:text-lg md:text-xl">
             더 나은 <span className="text-blue-500">사용자 경험</span>을 제공하기 위해 노력하는
             개발자입니다.
           </div>
