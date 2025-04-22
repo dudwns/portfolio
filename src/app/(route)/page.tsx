@@ -5,11 +5,17 @@ import Project from "@/components/section/Project";
 
 function Home() {
   return (
-    <div className="max-w-400 mx-auto">
-      <Intro />
-      <About />
-      <Skills />
-      <Project />
+    <div className="relative min-h-screen">
+      <div className="sticky inset-0 z-0 mx-auto h-screen">
+        <Intro />
+      </div>
+      <div className="relative z-10 bg-background pt-20">
+        <div className="mx-auto">
+          <About />
+          <Skills />
+          <Project />
+        </div>
+      </div>
     </div>
   );
 }
