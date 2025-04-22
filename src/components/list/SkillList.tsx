@@ -1,45 +1,54 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type SkillListProps = {
   title: string;
-  skill_list: { name: string; image: string; description: string }[];
+  skills: { name: string; image: string; description: string }[];
+  isInView: boolean;
+  index: number;
 };
 
-export default function SkillList({ title, skill_list }: SkillListProps) {
+export default function SkillList({ title, skills, isInView, index }: SkillListProps) {
   return (
-    <div className="flex flex-col items-center xl:items-start gap-4">
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <div className="flex flex-row xl:flex-col flex-wrap justify-center gap-x-2 gap-y-6  lg:gap-6 py-2">
-        {skill_list.map((skill, index) => (
-          <div
-            className="flex flex-col xl:flex-row items-center gap-6 w-24 xl:w-auto"
+    <>
+      <div className="mb-6">
+        <h3 className="text-xl font-bold tracking-wider">{title}</h3>
+      </div>
+      <div className="space-y-4">
+        {skills.map((skill, skillIndex) => (
+          <motion.div
             key={skill.name}
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            whileHover={{ y: -3 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.7 + index * 0.2 + skillIndex * 0.1,
+              y: {
+                duration: 0.2,
+                ease: "easeOut",
+              },
+            }}
+            className="bg-foreground/5 hover:bg-foreground/10 rounded-lg p-4 transition-colors"
           >
-            <div className="relative group">
-              <Image
-                key={skill.name}
-                src={skill.image}
-                alt={skill.name}
-                width={60}
-                height={60}
-                className="border rounded-md p-2 border-gray-200 bg-white shadow-md hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
-              />
-              <div
-                className={`absolute w-max top-1/2 max-w-[200px] xl:max-w-xs border border-gray-200
-                            px-3 py-2 bg-[#333232] text-white  rounded-md 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                            pointer-events-none z-50 text-justify text-xs xl:text-sm
-                            ${title === "Tools" ? "left-1/2 xl:left-auto xl:right-1/2" : "left-1/2"}
-                            ${index >= skill_list.length / 2 ? "left-auto right-1/2" : "left-1/2"}
-                            `}
-              >
-                {skill.description}
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-md p-1 flex items-center justify-center bg-white shrink-0">
+                <Image
+                  src={skill.image}
+                  alt={skill.name}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h4 className="font-medium">{skill.name}</h4>
+                <p className="text-sm text-foreground/70">{skill.description}</p>
               </div>
             </div>
-            <span className="text-center text-xs xl:text-2xl">{skill.name}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </>
   );
 }

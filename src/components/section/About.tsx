@@ -1,55 +1,52 @@
 "use client";
-import { useState } from "react";
-import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
-import animationData from "../../../public/animations/scrollAnimation.json";
-import { useScrollContext } from "@/app/context/ScrollContext";
+import BackgroundDecorations from "../background/BackgroundDecorations";
 
 export default function About() {
-  const [isH1Complete, setIsH1Complete] = useState(false);
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const { lastScrollY } = useScrollContext();
-
   return (
-    <section className="flex flex-col h-screen px-14 py-20 justify-between relative min-h-180">
-      <div>
-        <motion.h1
-          className="text-4xl font-bold w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          onAnimationComplete={() => setIsH1Complete(true)}
-        >
-          Front-End Developer
-        </motion.h1>
+    <section className="relative h-screen min-h-[800px] flex justify-center items-center overflow-hidden px-14">
+      <BackgroundDecorations />
+
+      <div className="relative w-full ">
         <motion.div
-          className="h-0.5 bg-foreground"
-          initial={{ width: 0 }}
-          animate={isH1Complete ? { width: "100%" } : { width: 0 }}
-          transition={{ duration: 0.5 }}
-        />
-      </div>
-      <div className="h-40 pt-16 xl:pt-0">
-        <ReactTyped
-          className="text-5xl xl:text-7xl font-bold w-full"
-          strings={["YEONG JUN <div>PORTFOLIO</div>"]}
-          typeSpeed={50}
-          backSpeed={25}
-          showCursor={false}
-          onComplete={() => setIsTypingComplete(true)}
-        />
-      </div>
-      {isTypingComplete && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isTypingComplete && lastScrollY === 0 ? { opacity: 1 } : { opacity: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="fixed bottom-0 left-0 right-0 mx-auto w-16 h-16"
+          className=" "
         >
-          <Lottie animationData={animationData} loop={true} />
+          <div className="flex items-center justify-between">
+            <div className="w-full lg:w-[30%] h-[1px] bg-foreground/30" />
+            <p className="test-xs md:text-base lg:text-lg xl:text-xl tracking-widest px-8">
+              FRONTEND PORTFOLIO
+            </p>
+            <div className="w-full lg:w-[30%] h-[1px] bg-foreground/30" />
+          </div>
         </motion.div>
-      )}
+        <div className="relative z-10 space-y-8 mt-30">
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="font-bold leading-none text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[12rem]"
+          >
+            KIM
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="font-bold text-right leading-none text-[4rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[12rem]"
+          >
+            YEONG JUN
+          </motion.h1>
+        </div>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="h-[1px] bg-foreground/30 transform origin-left mt-12"
+        />
+      </div>
     </section>
   );
 }

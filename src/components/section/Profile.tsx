@@ -8,10 +8,7 @@ import SectionTitle from "../title/SectionTitle";
 
 export default function Profile() {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, {
-    once: true,
-    amount: 0.3,
-  });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <motion.section
@@ -21,13 +18,18 @@ export default function Profile() {
       transition={{ duration: 0.5 }}
       className="flex flex-col px-14"
     >
-      <SectionTitle title="ABOUT ME" />
+      <SectionTitle title="ABOUT ME" isInView />
       <div
-        className="flex flex-col gap-20 pt-30 pb-70 justify-between items-center xl:flex-row xl:gap-0"
+        className="flex flex-col gap-20 pb-60 justify-between items-center xl:flex-row xl:gap-0"
         ref={ref}
       >
-        <div className="flex flex-col">
-          <div className="text-5xl sm:text-6xl flex flex-col items-start  mb-10 gap-4 ">
+        <motion.div
+          className="flex flex-col"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="flex flex-col items-start mb-10 gap-4 text-4xl md:text-5xl xl:text-6xl ">
             <span>안녕하세요,</span>
             <span>프론트엔드 개발자</span>
             <span>
@@ -41,8 +43,13 @@ export default function Profile() {
             더 나은 <span className="text-blue-500">사용자 경험</span>을 제공하기 위해 노력하는
             개발자입니다.
           </div>
-        </div>
-        <div className="flex gap-20 justify-center items-center">
+        </motion.div>
+        <motion.div
+          className="flex gap-20 justify-center items-center"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <Image
             src={"/images/profile/profile.jpeg"}
             alt="profile"
@@ -51,13 +58,19 @@ export default function Profile() {
             className="rounded-md w-50 sm:w-[240px] xl:w-[300px]"
           />
           <div className="flex flex-col gap-4">
-            <span>
-              <span className="text-xl sm:text-2xl xl:text-4xl font-bold">김영준</span>{" "}
-              <span className="text-xs sm:text-sm xl:text-base">KIM YEONG JUN</span>
-            </span>
-            <span className="text-sm sm:text-lg xl:text-xl bg-blue-500 p-1 text-center">
-              Front-End Developer
-            </span>
+            <div>
+              <div className="space-y-2">
+                <h3 className="text-4xl font-bold">김영준</h3>
+                <p className="text-sm sm:text-lg text-foreground/70 tracking-widest">
+                  KIM YEONG JUN
+                </p>
+              </div>
+            </div>
+            <div className="p-2 bg-blue-500/10">
+              <p className="text-blue-500 font-medium text-sm sm:text-lg text-center">
+                Front-End Developer
+              </p>
+            </div>
             <div className="text-sm sm:text-lg xl:text-xl flex gap-4 group">
               <Image
                 src="/images/profile/mail.svg"
@@ -99,7 +112,7 @@ export default function Profile() {
               <span className="text-sm sm:text-lg xl:text-xl">velog.io/@dudwns</span>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
