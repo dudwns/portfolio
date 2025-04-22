@@ -1,12 +1,18 @@
 "use client";
 import { motion } from "framer-motion";
 import BackgroundDecorations from "../background/BackgroundDecorations";
+import Lottie from "lottie-react";
+import animationData from "../../../public/animations/scrollAnimation.json";
+import { useScrollContext } from "@/app/context/ScrollContext";
+import { useState } from "react";
 
 export default function Intro() {
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  const { lastScrollY } = useScrollContext();
+
   return (
     <section className="relative h-screen min-h-[800px] flex justify-center items-center overflow-hidden px-14">
       <BackgroundDecorations />
-
       <div className="relative w-full ">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -45,8 +51,19 @@ export default function Intro() {
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
           className="h-[1px] bg-foreground/30 transform origin-left mt-12"
+          onAnimationComplete={() => setIsAnimationComplete(true)}
         />
       </div>
+      {isAnimationComplete && lastScrollY === 0 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={lastScrollY === 0 ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed bottom-0 left-0 right-0 mx-auto w-14 h-14 lg:w-16 lg:h-16"
+        >
+          <Lottie animationData={animationData} loop={true} />
+        </motion.div>
+      )}
     </section>
   );
 }
