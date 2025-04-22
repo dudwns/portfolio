@@ -28,7 +28,7 @@ export default function Intro() {
             <div className="w-full lg:w-[30%] h-[1px] bg-foreground/30" />
           </div>
         </motion.div>
-        <div className="relative z-10 space-y-8 mt-30">
+        <div className="relative space-y-8 mt-30">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
