@@ -12,7 +12,7 @@ export default function Project() {
 
   return (
     <motion.section
-      className="flex flex-col px-14"
+      className="flex flex-col px-14 min-h-screen"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}

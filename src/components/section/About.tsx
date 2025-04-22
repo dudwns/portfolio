@@ -15,7 +15,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col px-14"
+      className="flex flex-col px-14 min-h-screen"
     >
       <SectionTitle id="about" ref={ref} title="ABOUT ME" isInView />
       <div className="flex flex-col gap-20 pb-60 justify-between items-center xl:flex-row xl:gap-0">

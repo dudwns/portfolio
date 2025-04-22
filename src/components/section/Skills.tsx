@@ -14,7 +14,7 @@ export default function Skills() {
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col px-14 pb-20"
+      className="flex flex-col px-14 pb-20 min-h-screen"
     >
       <div>
         <SectionTitle id="skills" ref={ref} title="SKILLS" isInView />
