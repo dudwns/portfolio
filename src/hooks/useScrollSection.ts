@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export const useScrollSection = ({ sectionList }: { sectionList: SectionList[] }) => {
   const [activeSection, setActiveSection] = useState<string>("about");
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLLIElement>, id: string) => {
     e.preventDefault();
     const element = document.querySelector(`#${id}`);
     if (element) {
