@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <motion.nav
-      className="p-4 flex justify-end items-center fixed w-full z-10 text-base 2xl:hidden"
+      className="p-4 flex justify-end items-center fixed w-full z-20 text-base 2xl:hidden"
       initial={{ opacity: 1 }}
       animate={{
         opacity: isVisible ? 1 : 0,
