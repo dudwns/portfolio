@@ -1,6 +1,7 @@
-{
-  "SKILLS": {
-    "CORE_TECHNOLOGIES": [
+[
+  {
+    "title": "CORE_TECHNOLOGIES",
+    "skills": [
       {
         "name": "HTML",
         "image": "/images/skills/html.png",
@@ -21,8 +22,11 @@
         "image": "/images/skills/typescript.png",
         "description": "JavaScript에 정적 타입을 부여한 언어로, 코드 안정성을 높여줍니다."
       }
-    ],
-    "FRAMEWORKS": [
+    ]
+  },
+  {
+    "title": "FRAMEWORKS",
+    "skills": [
       {
         "name": "React.js",
         "image": "/images/skills/reactjs.png",
@@ -43,8 +47,11 @@
         "image": "/images/skills/reactHookForm.png",
         "description": "React에서 효율적인 폼 관리를 위한 라이브러리입니다."
       }
-    ],
-    "STYLINGS": [
+    ]
+  },
+  {
+    "title": "STYLINGS",
+    "skills": [
       {
         "name": "SASS",
         "image": "/images/skills/sass.png",
@@ -60,8 +67,11 @@
         "image": "/images/skills/tailwindcss.png",
         "description": "유틸리티 클래스 기반으로 빠르게 UI를 구성할 수 있는 CSS 프레임워크입니다."
       }
-    ],
-    "TOOLS": [
+    ]
+  },
+  {
+    "title": "TOOLS",
+    "skills": [
       {
         "name": "AWS",
         "image": "/images/skills/aws.png",
@@ -94,4 +104,4 @@
       }
     ]
   }
-}
+]
