@@ -1,6 +1,6 @@
 [
   {
-    "title": "CORE_TECHNOLOGIES",
+    "title": "LANGUAGES",
     "skills": [
       {
         "name": "HTML",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "title": "FRAMEWORKS",
+    "title": "MAIN STACK",
     "skills": [
       {
         "name": "React.js",
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "title": "STYLINGS",
+    "title": "STYLING",
     "skills": [
       {
         "name": "SASS",
