@@ -2,6 +2,7 @@ import Intro from "@/components/section/Intro";
 import About from "@/components/section/About";
 import Skills from "@/components/section/Skills";
 import Project from "@/components/section/Project";
+import SideNavigation from "@/components/Navigation/SideNavigation";
 
 function Home() {
   return (
@@ -11,9 +12,14 @@ function Home() {
       </div>
       <div className="relative z-10 bg-background pt-20">
         <div className="mx-auto">
-          <About />
-          <Skills />
-          <Project />
+          <div className="relative flex gap-20">
+            <SideNavigation />
+            <div>
+              <About />
+              <Skills />
+              <Project />
+            </div>
+          </div>
         </div>
       </div>
     </div>
