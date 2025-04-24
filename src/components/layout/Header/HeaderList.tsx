@@ -18,7 +18,7 @@ export default function HeaderList() {
         {SECTION_LIST.map((list) => (
           <li
             key={list.id}
-            className="relative text-sm `hover:text-white cursor-pointer text-gray-400"
+            className="relative text-sm `hover:text-foreground cursor-pointer text-foreground/50"
           >
             {list.name}
           </li>
@@ -32,15 +32,15 @@ export default function HeaderList() {
         <li
           key={list.id}
           onClick={(e) => scrollToSection(e, list.id)}
-          className={`relative text-sm hover:text-white cursor-pointer ${
-            activeSection === list.id ? "text-white" : "text-gray-400"
+          className={`relative text-sm hover:text-foreground cursor-pointer ${
+            activeSection === list.id ? "text-foreground" : "text-foreground/50"
           }`}
         >
           {list.name}
           {activeSection === list.id && (
             <motion.div
               layoutId="underline"
-              className="absolute w-full h-0.5 bg-white"
+              className="absolute w-full h-0.5 bg-foreground"
               transition={{ type: "spring", bounce: 0.2, duration: 0.1 }}
             />
           )}

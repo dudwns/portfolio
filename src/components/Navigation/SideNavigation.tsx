@@ -13,8 +13,8 @@ function SideNavigation() {
           <li
             key={section.id}
             onClick={(e) => scrollToSection(e, section.id)}
-            className={`cursor-pointer hover:text-white ${
-              activeSection === section.id ? "text-white" : "text-gray-400"
+            className={`cursor-pointer hover:text-foreground ${
+              activeSection === section.id ? "text-foreground" : "text-foreground/50"
             }`}
           >
             {section.name}

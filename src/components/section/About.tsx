@@ -25,7 +25,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="flex flex-col items-start mb-10 gap-4 text-4xl md:text-5xl xl:text-6xl ">
+          <div className="flex flex-col items-start mb-10 gap-4 text-4xl md:text-5xl xl:text-6xl">
             <span>안녕하세요,</span>
             <span>프론트엔드 개발자</span>
             <span>

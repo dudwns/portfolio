@@ -27,7 +27,7 @@ export default function ProjectCard({
   return (
     <motion.div
       key={title}
-      className="flex flex-col w-full h-90 bg-[#333232] mx-auto rounded-md shadow-md overflow-hidden relative group"
+      className="flex flex-col w-full h-90 bg-foreground/10 mx-auto rounded-md shadow-md overflow-hidden relative group"
       whileHover={{ y: -10 }}
       transition={{ duration: 0.2 }}
     >
@@ -38,7 +38,7 @@ export default function ProjectCard({
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
             <p className="text-xl">{title}</p>
-            <span className="text-gray-300 text-sm">
+            <span className="text-foreground/90 text-sm">
               {isCollaborative ? "Team Project" : "Sing Project"}
             </span>
           </div>
@@ -60,12 +60,12 @@ export default function ProjectCard({
         </div>
       </div>
       <motion.div
-        className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-0.2"
+        className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-0.2"
         initial={{ opacity: 0 }}
         whileHover={{ opacity: 1 }}
       >
         <span
-          className="text-white text-lg  border border-white rounded-md px-2 py-1 cursor-pointer"
+          className="text-foreground text-lg  border border-foreground rounded-md px-2 py-1 cursor-pointer"
           onClick={() => {
             router.push(`/projects/${route}`, { scroll: false });
           }}
