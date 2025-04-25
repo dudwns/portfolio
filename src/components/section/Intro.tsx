@@ -1,10 +1,13 @@
 "use client";
+
 import { motion } from "framer-motion";
 import BackgroundDecorations from "../background/BackgroundDecorations";
-import Lottie from "lottie-react";
 import animationData from "../../../public/animations/scrollAnimation.json";
 import { useScrollContext } from "@/app/context/ScrollContext";
 import { useState } from "react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Intro() {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
@@ -18,7 +21,6 @@ export default function Intro() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className=" "
         >
           <div className="flex items-center justify-between">
             <div className="w-full lg:w-[30%] h-[1px] bg-foreground/30" />
