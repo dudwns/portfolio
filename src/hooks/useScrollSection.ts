@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionList } from "@/constants/section";
 import { useEffect, useState } from "react";
 
