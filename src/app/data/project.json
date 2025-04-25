@@ -1,44 +1,42 @@
-{
-  "PROJECT_LIST": [
-    {
-      "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/linkhub_thumbnail.webp",
-      "title": "LinkHub",
-      "description": "개인 또는 팀 스페이스를 생성하여 링크를 저장하고, 다른 사용자에게 링크 모음집을 공유할 수 있는 서비스",
-      "isCollaborative": true,
-      "route": "linkhub",
-      "skills": ["Next", "TypeScript", "Tailwind", "React Query", "AWS"]
-    },
-    {
-      "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/angola_thumbnail.webp",
-      "title": "Angola",
-      "description": "SNS 기능 API를 활용한 밸런스 게임 커뮤니티 서비스",
-      "isCollaborative": true,
-      "route": "angola",
-      "skills": ["React", "TypeScript", "Recoil", "Styled Components", "React Query"]
-    },
-    {
-      "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/portfolio_thumbnail.webp",
-      "title": "Portfolio",
-      "description": "프론트엔드 개발자 김영준 포트폴리오 사이트",
-      "isCollaborative": false,
-      "route": "portfolio",
-      "skills": ["Next", "TypeScript", "Tailwind"]
-    },
-    {
-      "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/mealkitary_thumbnail.webp",
-      "title": "Mealkitary",
-      "description": "밀키트를 거래할 수 있도록 예약 서비스를 제공하는 서비스",
-      "isCollaborative": true,
-      "route": "mealkitary",
-      "skills": ["Next", "TypeScript", "Tailwind", "Recoil", "React Query"]
-    },
-    {
-      "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/notion_thumbnail.webp",
-      "title": "Notion Clone",
-      "description": "데브 코스 교육 과정에서 제공된 API를 활용하여 만든 노션 클론 에디터 서비스",
-      "isCollaborative": false,
-      "route": "notion",
-      "skills": ["JavaScript"]
-    }
-  ]
-}
+[
+  {
+    "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/linkhub_thumbnail.webp",
+    "title": "LinkHub",
+    "description": "개인 또는 팀 스페이스를 생성하여 링크를 저장하고, 다른 사용자에게 링크 모음집을 공유할 수 있는 서비스",
+    "isCollaborative": true,
+    "route": "linkhub",
+    "skills": ["Next", "TypeScript", "Tailwind", "React Query", "AWS"]
+  },
+  {
+    "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/angola_thumbnail.webp",
+    "title": "Angola",
+    "description": "SNS 기능 API를 활용한 밸런스 게임 커뮤니티 서비스",
+    "isCollaborative": true,
+    "route": "angola",
+    "skills": ["React", "TypeScript", "Recoil", "Styled Components", "React Query"]
+  },
+  {
+    "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/portfolio_thumbnail.webp",
+    "title": "Portfolio",
+    "description": "프론트엔드 개발자 김영준 포트폴리오 사이트",
+    "isCollaborative": false,
+    "route": "portfolio",
+    "skills": ["Next", "TypeScript", "Tailwind"]
+  },
+  {
+    "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/mealkitary_thumbnail.webp",
+    "title": "Mealkitary",
+    "description": "밀키트를 거래할 수 있도록 예약 서비스를 제공하는 서비스",
+    "isCollaborative": true,
+    "route": "mealkitary",
+    "skills": ["Next", "TypeScript", "Tailwind", "Recoil", "React Query"]
+  },
+  {
+    "image": "https://yeongjun-portfolio.s3.ap-northeast-2.amazonaws.com/notion_thumbnail.webp",
+    "title": "Notion Clone",
+    "description": "데브 코스 교육 과정에서 제공된 API를 활용하여 만든 노션 클론 에디터 서비스",
+    "isCollaborative": false,
+    "route": "notion",
+    "skills": ["JavaScript"]
+  }
+]

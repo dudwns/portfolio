@@ -4,7 +4,7 @@ import { useRef } from "react";
 import ProjectCard from "../card/ProjectCard";
 import { motion, useInView } from "framer-motion";
 import SectionTitle from "../title/SectionTitle";
-import { PROJECT_LIST } from "@/app/data/project.json";
+import PROJECT_LIST from "@/app/data/project.json";
 
 export default function Project() {
   const ref = useRef<HTMLDivElement | null>(null);
