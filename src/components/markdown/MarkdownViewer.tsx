@@ -4,15 +4,18 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { getProject } from "@/service/project";
 import ModalOverlay from "../modal/ModalOverlay";
 import Button from "../button/Button";
 import { IoArrowBack } from "react-icons/io5";
 import { PROJECT_BACKGROUND_COLOR } from "@/constants/projects";
 
-export default async function MarkdownViewer({ slug }: { slug: string }) {
-  const markdown = await getProject(slug);
-
+export default function MarkdownViewer({
+  slug,
+  markdown,
+}: {
+  slug: string;
+  markdown: string;
+}) {
   return (
     <ModalOverlay>
       <article className=" max-w-screen-lg mx-auto lg:my-auto lg:max-h-[90vh] overflow-y-auto no-scrollbar shadow-xl fixed inset-0 z-40 scrollbar-hide  bg-white">
